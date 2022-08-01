@@ -23,8 +23,6 @@ namespace HairSalon.Controllers
     }
 
     public ActionResult Details(int id)
-    //first match (what is the FIRST MATCH)
-    //_db.Stylists is the id match ^ (one stylist not the whole list)
     {
       Stylist thisStylist= _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
